@@ -131,7 +131,7 @@ int main(int argc, char ** argv) {
 
     printf("Create context\n");
     context = CL_CHECK2(clCreateContext(NULL, 1, &device_id, NULL, NULL, &_err));
-    int size = 16;
+    int size = 4;
 
     printf("Allocate device buffers\n");
     size_t nbytes = size * size * sizeof(float);
@@ -161,6 +161,8 @@ int main(int argc, char ** argv) {
 
     // Generate input values
     h_in = (float *)malloc(sizeof(float) * size * size);
+    h_out = (float *)malloc(sizeof(float) * size * size);
+
     printf("Generating INPUT matrix\n");
     randomize_matrix(h_in, size * size);
     
@@ -194,9 +196,9 @@ int main(int argc, char ** argv) {
     save_matrix_to_file(h_out, size, "result_matrix.txt");
 
 
-    printf("Print C values \n");
-    for (int i = 0; i < size*size; i++) {
-      printf("%f\n", h_out[i]);
-    }
+    // printf("Print C values \n");
+    // for (int i = 0; i < size*size; i++) {
+    //   printf("%f\n", h_out[i]);
+    // }
     cleanup();
 }

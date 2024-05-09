@@ -24,4 +24,3 @@ __kernel void softmax(__global const float *input, __global float *output, int c
         }
     }
 }
-
