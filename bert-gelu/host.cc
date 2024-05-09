@@ -161,6 +161,7 @@ int main(int argc, char ** argv) {
 
     // Generate input values
     h_in = (float *)malloc(sizeof(float) * size * size);
+    h_out = (float *)malloc(sizeof(float) * size * size);
     printf("Generating INPUT matrix\n");
     randomize_matrix(h_in, size * size);
     

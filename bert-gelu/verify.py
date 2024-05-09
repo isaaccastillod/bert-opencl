@@ -1,15 +1,15 @@
 import torch
 import numpy as np
 
-size = 1024
+size = 16
 # Load matrices from files
-h_a = np.loadtxt('matrix_a.txt').reshape((size, size))
+h_in = np.loadtxt('matrix_in.txt').reshape((size, size))
 
 # Convert numpy matrix to PyTorch tensor
-a = torch.from_numpy(h_a).float()
+input_matrix = torch.from_numpy(h_in).float()
 
 # Perform gelu over matrix
-result = torch.nn.functional.gelu(a)
+result = torch.nn.functional.gelu(input_matrix)
 
 # Load result matrix from file
 result_matrix = np.loadtxt('result_matrix.txt').reshape((size, size))
