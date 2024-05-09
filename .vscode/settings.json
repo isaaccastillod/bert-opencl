@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "array": "cpp",
+        "string_view": "cpp",
+        "__hash_table": "cpp",
+        "deque": "cpp",
+        "memory": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "span": "cpp",
+        "iterator": "cpp",
+        "iosfwd": "cpp"
+    }
+}
